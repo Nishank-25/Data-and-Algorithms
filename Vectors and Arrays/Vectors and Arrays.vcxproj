@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c4405f3e-49d4-486a-9901-0528ebfd9a12}</ProjectGuid>
-    <RootNamespace>VetorandFreestoreD</RootNamespace>
+    <ProjectGuid>{b7c3f5ca-708a-4210-81ac-47cac9041180}</ProjectGuid>
+    <RootNamespace>VectorsandArrays</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Vector and Free store Drills.cpp" />
+    <ClCompile Include="Vectors and Arrays.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

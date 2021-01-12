@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Expt", "Expt\Expt.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vetor and Free store D", "Vetor and Free store D\Vetor and Free store D.vcxproj", "{C4405F3E-49D4-486A-9901-0528EBFD9A12}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors and Arrays", "Vectors and Arrays\Vectors and Arrays.vcxproj", "{B7C3F5CA-708A-4210-81AC-47CAC9041180}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{C4405F3E-49D4-486A-9901-0528EBFD9A12}.Release|x64.Build.0 = Release|x64
 		{C4405F3E-49D4-486A-9901-0528EBFD9A12}.Release|x86.ActiveCfg = Release|Win32
 		{C4405F3E-49D4-486A-9901-0528EBFD9A12}.Release|x86.Build.0 = Release|Win32
+		{B7C3F5CA-708A-4210-81AC-47CAC9041180}.Debug|x64.ActiveCfg = Debug|x64
+		{B7C3F5CA-708A-4210-81AC-47CAC9041180}.Debug|x64.Build.0 = Debug|x64
+		{B7C3F5CA-708A-4210-81AC-47CAC9041180}.Debug|x86.ActiveCfg = Debug|Win32
+		{B7C3F5CA-708A-4210-81AC-47CAC9041180}.Debug|x86.Build.0 = Debug|Win32
+		{B7C3F5CA-708A-4210-81AC-47CAC9041180}.Release|x64.ActiveCfg = Release|x64
+		{B7C3F5CA-708A-4210-81AC-47CAC9041180}.Release|x64.Build.0 = Release|x64
+		{B7C3F5CA-708A-4210-81AC-47CAC9041180}.Release|x86.ActiveCfg = Release|Win32
+		{B7C3F5CA-708A-4210-81AC-47CAC9041180}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

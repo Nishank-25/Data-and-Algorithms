@@ -30,7 +30,24 @@ public:
 
 };
 
+struct Point {
+    const double x, y;
+};
 
+constexpr double xscale = 10; // scaling factors 
+constexpr double yscale = 0.8;
+constexpr Point scale(Point p) { return {xscale*p.x,yscale*p.y}; };
+
+void user(Point p1) {
+	
+	constexpr Point p2{ 10,10 };
+	Point p3 = scale(p1); // OK: p3 == {100,8}; run-time evaluation is fine 
+	Point p4 = scale(p2); // p4 == {100,8}
+	//constexpr Point p5 = scale(p1); // error: scale (p1) is not a constant // expression 
+	constexpr Point p6 = scale(p2); // p6 == {100,8} // . . . 
+}
+
+	
 
 int main()
 {
@@ -60,7 +77,19 @@ int main()
 	++p;
 	cout << "p==" << p << "; contents of p==" << *p << "\n";*/
 
-	
+	user(Point{ 10,10 });
+
+   int a = 3;
+
+   int c = a++;
+
+   c = ++a;
+   double ad[10];
+   double* p1 = &ad[0]; 
+   double* p2 = p1 + 7; double* p3 = &p1[7]; if (p2 != p3) cout << "impossible!\n";
+
+   
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -1,13 +1,11 @@
-// Vetor and Free store D.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-using namespace std;
+
 int main()
 {
-	int i = 54;
-	cout << "saale tp qa krra";
-
+    std::cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
