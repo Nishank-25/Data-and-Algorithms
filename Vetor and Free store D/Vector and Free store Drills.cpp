@@ -168,13 +168,13 @@ int main()
 	//E9
 
 	 // determine stack growth direction
-	int i1 = 0;
+	/*int i1 = 0;
 	int i2 = 0;
 	int i3 = 0;
 	cout << "Addresses on stack:\n" << &i1 << "\n" << &i2 << "\n" << &i3 << "\n";
 	int stack_diff = &i2 - &i1;
 	if (stack_diff > 0) cout << "Stack grows up\n";
-	else cout << "Stack grows down\n";
+	else cout << "Stack grows down\n";*/
 
 	// determine heap growth direction
 	/*int* ip1 = new int(0);

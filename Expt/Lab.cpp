@@ -4,6 +4,8 @@
 #include <iostream>
 #include<vector>
 #include<list>
+#include<concepts>
+//#include"../../../std_lib_facilities.h"
 using namespace std;
 
 class T {
@@ -47,7 +49,29 @@ void user(Point p1) {
 	constexpr Point p6 = scale(p2); // p6 == {100,8} // . . . 
 }
 
+
+template<typename t,typename t1>
+class Test {
+    t type1;
+	t1 type2;
+public:
+	void foo();
+	Test(t x, t1 y)
+		:type1{ x }, type2{ y }
+	{}
+};
+
+template<typename t ,typename t1>
+void Test<t,t1>::foo() {
+
+
+	decltype(type1) x=type1; // x is declared with type of n
+	auto x1{ type2 }; // x1 deduces type of t 
 	
+	cout << " type of x1 is " << typeid(x1).name()<<endl;
+	cout << " type of x is " << typeid(x).name() << endl;
+}
+
 
 int main()
 {
@@ -77,7 +101,7 @@ int main()
 	++p;
 	cout << "p==" << p << "; contents of p==" << *p << "\n";*/
 
-	user(Point{ 10,10 });
+	/*user(Point{ 10,10 });
 
    int a = 3;
 
@@ -85,11 +109,39 @@ int main()
 
    c = ++a;
    double ad[10];
-   double* p1 = &ad[0]; 
+   double* p1 = &ad[0];
    double* p2 = p1 + 7; double* p3 = &p1[7]; if (p2 != p3) cout << "impossible!\n";
 
-   
+   auto i = Point{};
+   auto ii = i;
 
+   int large;int a1{ 20 }, b{ 30 };
+   large = (a1 > b)? b : a1;
+
+   cout << large;
+
+   vector<int> v;
+   cout<<v[2];*/
+
+   //unique_ptr<int>p{ new int{4} };
+
+	//auto and decltype
+	vector<int> v;
+	vector<double>v1;
+	int v2 = 0;
+	decltype(v2) v3 = 4;
+	double v5 = 89.98;
+	auto v6 = v5; // or auto v6 = 23.45;
+
+	Test<int, double> t1{23,23.56}; t1.foo();
+	Test<decltype(v), decltype(v1)> t2{ v,v1 }; t2.foo();
+	Test<int, int> t3{ v2,v3 }; t3.foo();
+	Test<decltype(v), double> t4{ v,v5 }; t4.foo();
+	Test<decltype(v5), double> t5{ v5,v6 }; t5.foo();
+
+	
+
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
@@ -102,3 +154,5 @@ int main()
 //   4. Use the Error List window to view errors
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
+

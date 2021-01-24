@@ -2,7 +2,6 @@
 //
 
 #include <iostream>
-#include<algorithm>
 using namespace std;
 
 // a very simplified vector of doubles
@@ -25,7 +24,7 @@ public:
 		copy( lst.begin(),lst.end(),elem); // initialize (using std::copy())
 	}
 
-	vector(const vector& arg) // allocate elements, then initialize them by copying 
+	vector(const vector& arg) // allocate elements, then initialize them by copying (copy constructor)
 		:sz{arg.sz}, elem{new double[arg.sz]} 
 	{ 
 		copy(arg.elem,arg.elem+sz,elem); 
@@ -248,11 +247,13 @@ int main()
 	 //18.7 Palindromes
 
 	 //using strings
-	 for (string s; cin >> s; ) {
+	 /*for (string s; cin >> s; ) {
 		 cout << s << " is";
 		 if (!is_palindrome(s)) cout << " not";
 		 cout << " a palindrome\n";
-	 }
+	 }*/
+
+
 
 }
 
